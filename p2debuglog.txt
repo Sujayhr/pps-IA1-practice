@@ -1,0 +1,36 @@
+Reading symbols from a.out...
+(gdb) b main
+Breakpoint 2 at 0x1353: file main.c, line 68.
+(gdb) r
+Starting program: /home/a.out 
+
+Breakpoint 2, main () at main.c:68
+68      {
+(gdb) n
+70        x=input();
+(gdb) n
+Enter a number
+9
+71        y=input();
+(gdb) n
+Enter a number
+8
+72        z=input();
+(gdb) n
+Enter a number
+7
+73        a2=cmp(x,y,z);
+(gdb) n
+74      printf("%d is the largest\n",a2);
+(gdb) n
+9 is the largest
+75        input1(&a2,&b2,&c2);
+(gdb) n
+enter 3 numbers
+9 8 7 
+76        cmp1(a2,b2,c2,&large1);
+(gdb) n
+77      }
+(gdb) c
+Continuing.
+9 is the largest[Inferior 1 (process 2705) exited normally]
