@@ -1,0 +1,30 @@
+Reading symbols from a.out...
+(gdb) b main
+Note: breakpoint 2 also set at pc 0x12c1.
+Breakpoint 4 at 0x12c1: file main.c, line 40.
+(gdb) r
+Starting program: /home/a.out 
+
+Breakpoint 2, main () at main.c:40
+40      {
+(gdb) n
+42          t1 = input();
+(gdb) n
+Enter the Real part: 7
+Enter the Imaginary part: 8
+43          t2 = input();
+(gdb) n
+Enter the Real part: 8
+Enter the Imaginary part: 7
+
+Breakpoint 1, main () at main.c:44
+44          sum = add(t1, t2);
+(gdb) n
+
+Breakpoint 3, add (a=..., b=...) at main.c:27
+27      {
+(gdb) c
+Continuing.
+The sum of 7.0 + 8.0i and 8.0 + 7.0i is 15.0 + 15.0i
+[Inferior 1 (process 3298) exited normally]
+(gdb) 
