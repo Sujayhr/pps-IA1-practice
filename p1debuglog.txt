@@ -1,0 +1,27 @@
+(gdb) b main
+Breakpoint 1 at 0x1239: file main.c, line 25.
+(gdb) r
+Starting program: /home/a.out 
+
+Breakpoint 1, main () at main.c:25
+25      {
+(gdb) n
+27        x=input(x1,y1);
+(gdb) n
+Enter a numbers
+8
+28        y=input(x1,y1);
+(gdb) n
+Enter a numbers
+8
+29        add(x,y,&sum);
+(gdb) n
+30        output(x,y,&sum);
+(gdb) n
+31      return 0;
+(gdb) n
+32      }
+(gdb) c
+Continuing.
+16[Inferior 1 (process 902) exited normally]
+(gdb) Quit
