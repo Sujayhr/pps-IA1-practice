@@ -1,0 +1,32 @@
+Reading symbols from a.out...
+(gdb) info break
+
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x0000000000001335 in main at main.c:44
+2       breakpoint     keep y   0x0000000000001266 in sum_n_arrays at main.c:26
+(gdb) b main
+Note: breakpoint 1 also set at pc 0x1335.
+Breakpoint 3 at 0x1335: file main.c, line 44.
+(gdb) r
+Starting program: /home/a.out 
+
+Breakpoint 1, main () at main.c:44
+44      {
+(gdb) n
+46          n=input_array_size();
+(gdb) n
+enter the size of array : 5
+47          int a[n];
+(gdb) n
+48          array_input(n,a);
+(gdb) n
+enter the values
+9 8 7 6 5 
+49          sum=sum_n_arrays(n,a);
+(gdb) n
+
+Breakpoint 2, sum_n_arrays (n=5, a=0x7fffffffeb70) at main.c:26
+26      {
+(gdb) c
+Continuing.
+9+8+7+6+5 is 35[Inferior 1 (process 318) exited normally]
